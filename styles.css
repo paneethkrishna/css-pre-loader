@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.spinner{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+.spinner div{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+}
+.spinner div:nth-child(1){
+       border-top-color:#ad60f5 ;
+    animation: spin1 1s linear infinite;
+}
+.spinner div:nth-child(2){  
+    border-bottom-color:#ad60f5 ;
+    animation: spin2 1s linear infinite;
+}
+@keyframes spin1{
+    0%{ transform: rotate(0deg); border-width: 10px; }
+    50%{ transform: rotate(180deg); border-width: 1px;border-top-color:black ; }
+    100%{ transform: rotate(360deg); border-width: 10px; }
+}
+@keyframes spin2{
+    0%{ transform: rotate(0deg); border-width: 1px; }
+    50%{ transform: rotate(180deg); border-width: 10px; }
+    100%{ transform: rotate(360deg); border-width: 1px; border-bottom-color:black ;}
+}
